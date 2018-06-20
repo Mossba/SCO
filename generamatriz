@@ -1,0 +1,5 @@
+fold -s -w8 data.dat > d.txt
+awk '{ print; } NR % 4==0 {print " ";}' d.txt > d2.txt
+rm data.dat
+rm d.txt
+mv d2.txt data.dat
